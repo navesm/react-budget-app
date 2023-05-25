@@ -3,7 +3,7 @@ import {AppContext} from '../context/AppContext';
 
 
 
-const Budget = () => {
+const Budget = (props) => {
     const {expenses, budget} = useContext(AppContext);
     const totalExpenses = expenses.reduce((total, item) => {
         return (total = total + item.cost);
@@ -17,7 +17,7 @@ const Budget = () => {
     }
     return (
         <div className= 'alert alert-secondary'>
-            Budget: £
+            Budget: {props.currency}
                 <input 
                   placeholder={budget}
                   type='number'

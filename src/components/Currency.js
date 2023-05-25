@@ -1,8 +1,7 @@
 import React from 'react';
-// import { AppContext } from '../context/AppContext';
+
 
 const Currency = () => {
-    // const {value, name} = useContext(AppContext);
     return (
         <div className= 'btn btn-success'
               style={{marginLeft:'2rem'}}>

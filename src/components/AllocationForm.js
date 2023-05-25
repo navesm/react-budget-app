@@ -60,7 +60,7 @@ const AllocationForm = (props) => {
                   </select>
                 
                   <div className="input-group-prepend" style={{ marginLeft: '2rem' }}>
-                      <label> £</label>
+                      <label> {props.currency}</label>
                       <input
                         required='required'
                         type='number'
