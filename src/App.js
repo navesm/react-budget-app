@@ -13,6 +13,9 @@ import Currency from './components/Currency';
 
 const App = () => {
     const [currency, setCurrency] = useState('£');
+    const handleCurrencyChange = (newCurrency) => {
+        setCurrency(newCurrency);
+    }
 
     return (
         <AppProvider>
@@ -30,7 +33,7 @@ const App = () => {
                     </div>
                     <div className='col-sm'>
                         <Currency 
-                        onChange={(event) => setCurrency(currency => event.target.value)}/>
+                        currency={currency} onCurrencyChange={handleCurrencyChange}/>
                     </div>
                 </div>
                 <h3 className='mt-3'>Allocation</h3>
